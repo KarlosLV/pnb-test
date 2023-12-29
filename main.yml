@@ -1,8 +1,8 @@
 ---
-- name: Set User
-  hosts: all
+- name: Check connection
+  hosts: 189.88.18.215
   tasks:
-  - name: Pinging Host
-    ansible.netcommon.net_ping:
-      dest: 189.88.18.215
-      count: 10
+    - name: Test
+      ansible.builtin.ping:
+      
+  
