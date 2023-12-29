@@ -1,0 +1,8 @@
+---
+- name: Set User
+  hosts: localhost
+  tasks:
+  - name: Pinging Host
+    ansible.netcommon.net_ping:
+      dest: 189.88.18.215
+      count: 10
