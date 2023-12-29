@@ -1,6 +1,6 @@
 ---
 - name: Set User
-  hosts: localhost
+  hosts: all
   tasks:
   - name: Pinging Host
     ansible.netcommon.net_ping:
