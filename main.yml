@@ -1,4 +1,28 @@
 ---
-- include: ping-all.yml
-- include: aix_bootstrap.yml
-- include: aix_oslevel_check.yml
+- name: Check Connection
+  hosts: pnb-hosts
+  tasks:
+    - name: Ping IP
+      ansible.builtin.ping:
+      
+- name: Prep AIX for Ansible 
+  hosts: aix.server.example
+  vars: 
+    pkgtype: yum 
+  collections:
+    - ibm.power_aix
+
+- name: AIX oslevel checking playbook 
+  hosts: aix.server.example 
+  tasks:
+
+  - name: Gather LPP Facts 
+    shell: "oslevel -s"
+    register: output_oslevel
+
+  - name: Print the oslevel
+    debug:
+      msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
+
+      
+  
