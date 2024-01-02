@@ -11,7 +11,7 @@
     pkgtype: yum 
   collections:
     - ibm.power_aix
-  roles:
+  include_role:
     - power_aix_bootstrap
 
 - name: AIX oslevel checking playbook 
