@@ -33,12 +33,12 @@
     - ibm.power_aix
   tasks:
 
-#   - name: Download AIX Updates
-#     nim_suma:
-#       action: download
-#       download_dir: "/export/nim/lpp_source"
-#       lpp_source_name: "{{ nim_lpp_source }}"
-#       oslevel: "{{ oslevel }}"
+  - name: Download AIX Updates
+    nim_suma:
+      action: download
+      download_dir: "/export/nim/lpp_source"
+      lpp_source_name: "{{ nim_lpp_source }}"
+      oslevel: "{{ oslevel }}"
   
 # - name: AIX oslevel checking playbook 
 #   hosts: aix.server.example 
