@@ -1,8 +1,8 @@
 ---
-- name: Check connection
-  hosts: 189.88.18.215
+- name: Check Connection
+  hosts: 189.88.18.90
   tasks:
-    - name: Test
+    - name: Ping IP
       ansible.builtin.ping:
       
   
