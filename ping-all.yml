@@ -1,0 +1,8 @@
+---
+- name: Check Connection
+  hosts: pnb-hosts
+  tasks:
+    - name: Ping IP
+      ansible.builtin.ping:
+      
+  

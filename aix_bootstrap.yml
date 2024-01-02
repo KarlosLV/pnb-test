@@ -1,0 +1,10 @@
+---
+- name: Prep AIX for Ansible 
+  hosts: aix.server.example
+  vars: 
+    pkgtype: yum 
+  collections:
+    - ibm.power_aix
+
+      
+  
