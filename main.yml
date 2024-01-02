@@ -11,8 +11,8 @@
     pkgtype: yum 
   collections:
     - ibm.power_aix
-  include_role:
-    - power_aix_bootstrap
+  roles:
+    - role: power_aix_bootstrap
 
 - name: AIX oslevel checking playbook 
   hosts: aix.server.example 
