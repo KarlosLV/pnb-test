@@ -24,14 +24,14 @@
     debug:
       msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
 
-# - name: AIX Patching Playbook 
-#   hosts: aix.server.example
-#   vars: 
-#     oslevel: 7200-05-05
-#     nim_lpp_source: 7200-05-06-2320-lpp_source
-#   collections:
-#     - ibm.power_aix
-#   tasks:
+- name: AIX Patching Playbook 
+  hosts: aix.server.example
+  vars: 
+    oslevel: 7200-05-05
+    nim_lpp_source: 7200-05-06-2320-lpp_source
+  collections:
+    - ibm.power_aix
+  tasks:
 
 #   - name: Download AIX Updates
 #     nim_suma:
