@@ -1,6 +1,6 @@
 ---
 - name: AIX oslevel checking playbook 
-  hosts: all 
+  hosts: aix.server.example 
   tasks:
 
   - name: Gather LPP Facts 
