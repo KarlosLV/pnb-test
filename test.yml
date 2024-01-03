@@ -11,8 +11,6 @@
     pkgtype: yum 
   collections:
     - ibm.power_aix
-  roles:
-    - role: d_little.ansible_role_aix_lvm
 
 - name: AIX oslevel checking playbook 
   hosts: aix.server.example 
@@ -35,21 +33,21 @@
     - ibm.power_aix
   tasks:
 
-  # - name: Download AIX Updates
-  #   nim_suma:
-  #     action: download
-  #     download_dir: "/export/nim/lpp_source"
-  #     lpp_source_name: "{{ nim_lpp_source }}"
-  #     oslevel: "{{ oslevel }}"
+  - name: Download AIX Updates
+    nim_suma:
+      action: download
+      download_dir: "/export/nim/lpp_source"
+      lpp_source_name: "{{ nim_lpp_source }}"
+      oslevel: "{{ oslevel }}"
   
-# - name: AIX oslevel checking playbook 
-#   hosts: aix.server.example 
-#   tasks:
+- name: AIX oslevel checking playbook 
+  hosts: aix.server.example 
+  tasks:
 
-#   - name: Gather LPP Facts 
-#     shell: "oslevel -s"
-#     register: output_oslevel
+  - name: Gather LPP Facts 
+    shell: "oslevel -s"
+    register: output_oslevel
 
-#   - name: Print the oslevel
-#     debug:
-#       msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
+  - name: Print the oslevel
+    debug:
+      msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
