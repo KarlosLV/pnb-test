@@ -34,7 +34,7 @@
   tasks:
 
   - name: Download AIX Updates
-    nim_suma:
+    nim:
       action: download
       download_dir: "/export/nim/lpp_source"
       lpp_source_name: "{{ nim_lpp_source }}"
