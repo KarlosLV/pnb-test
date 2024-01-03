@@ -12,8 +12,8 @@
   collections:
     - ibm.power_aix
   roles:
-    - d_little.ansible_role_aix_lvm
-    
+    - role: d_little.ansible_role_aix_lvm
+
 - name: AIX oslevel checking playbook 
   hosts: aix.server.example 
   tasks:
